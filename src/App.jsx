@@ -2,11 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiPhone, FiGlobe, FiCode, FiGithub, FiTwitter, FiSlack } from 'react-icons/fi';
 import { FaRobot, FaHeadset, FaServer } from 'react-icons/fa';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import FeatureCard from './components/FeatureCard';
-import CTAButton from './components/CTAButton';
-import CodeBlock from './components/CodeBlock';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import FeatureCard from "./components/FeatureCard";
+import CTAButton from "./components/CTAButton";
+import CodeBlock from "./components/CodeBlock";
 
 const App = () => {
   const features = [
