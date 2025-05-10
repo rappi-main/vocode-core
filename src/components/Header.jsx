@@ -27,6 +27,10 @@ const Header = () => {
     }
   };
 
+  const handleExternalLink = (url) => {
+    window.location.href = url;
+  };
+
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4">
@@ -55,10 +59,44 @@ const Header = () => {
             >
               Documentation
             </a>
-            <a href="https://vocode.dev/pricing" className="text-gray-700 hover:text-primary-500 transition-colors">Pricing</a>
-            <a href="https://vocode.dev/blog" className="text-gray-700 hover:text-primary-500 transition-colors">Blog</a>
-            <a href="https://github.com/vocodedev/vocode-python" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary-500 transition-colors">GitHub</a>
-            <a href="https://app.vocode.dev" className="bg-primary-500 text-white px-4 py-2 rounded-md hover:bg-primary-600 transition-colors">Dashboard</a>
+            <a 
+              href="https://vocode.dev/pricing" 
+              className="text-gray-700 hover:text-primary-500 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                handleExternalLink('https://vocode.dev/pricing');
+              }}
+            >
+              Pricing
+            </a>
+            <a 
+              href="https://vocode.dev/blog" 
+              className="text-gray-700 hover:text-primary-500 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                handleExternalLink('https://vocode.dev/blog');
+              }}
+            >
+              Blog
+            </a>
+            <a 
+              href="https://github.com/vocodedev/vocode-python" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-700 hover:text-primary-500 transition-colors"
+            >
+              GitHub
+            </a>
+            <a 
+              href="https://app.vocode.dev" 
+              className="bg-primary-500 text-white px-4 py-2 rounded-md hover:bg-primary-600 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                handleExternalLink('https://app.vocode.dev');
+              }}
+            >
+              Dashboard
+            </a>
           </nav>
           
           {/* Mobile Menu Button */}
@@ -98,10 +136,44 @@ const Header = () => {
             >
               Documentation
             </a>
-            <a href="https://vocode.dev/pricing" className="text-gray-700 hover:text-primary-500 transition-colors py-2">Pricing</a>
-            <a href="https://vocode.dev/blog" className="text-gray-700 hover:text-primary-500 transition-colors py-2">Blog</a>
-            <a href="https://github.com/vocodedev/vocode-python" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary-500 transition-colors py-2">GitHub</a>
-            <a href="https://app.vocode.dev" className="bg-primary-500 text-white px-4 py-2 rounded-md hover:bg-primary-600 transition-colors text-center">Dashboard</a>
+            <a 
+              href="https://vocode.dev/pricing" 
+              className="text-gray-700 hover:text-primary-500 transition-colors py-2"
+              onClick={(e) => {
+                e.preventDefault();
+                handleExternalLink('https://vocode.dev/pricing');
+              }}
+            >
+              Pricing
+            </a>
+            <a 
+              href="https://vocode.dev/blog" 
+              className="text-gray-700 hover:text-primary-500 transition-colors py-2"
+              onClick={(e) => {
+                e.preventDefault();
+                handleExternalLink('https://vocode.dev/blog');
+              }}
+            >
+              Blog
+            </a>
+            <a 
+              href="https://github.com/vocodedev/vocode-python" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-700 hover:text-primary-500 transition-colors py-2"
+            >
+              GitHub
+            </a>
+            <a 
+              href="https://app.vocode.dev" 
+              className="bg-primary-500 text-white px-4 py-2 rounded-md hover:bg-primary-600 transition-colors text-center"
+              onClick={(e) => {
+                e.preventDefault();
+                handleExternalLink('https://app.vocode.dev');
+              }}
+            >
+              Dashboard
+            </a>
           </div>
         </motion.div>
       )}
